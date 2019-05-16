@@ -13,13 +13,13 @@ export class User {
 
   @Column({
     type: 'bytea',
-    name: 'encrypted_password',
+    name: 'key',
   })
-  public encryptedPassword: Buffer;
+  public key: Buffer;
 
   @Column({
     type: 'bytea',
-    name: 'salt_value',
+    name: 'salt',
   })
-  public saltValue: Buffer;
+  public salt: Buffer;
 }

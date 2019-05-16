@@ -2,10 +2,21 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## TODO
-- [ ] TypeORM + localhost docker postgres Setup
+## HOW TO SET UP DATABASE DOCKER
+
+
+## MUST-TODO
+- [x] TypeORM + localhost docker postgres Setup
 - [ ] User + Login Module
+  - User
+    - [x] User Module/Database Initialization in Development
+    - [ ] POST User
+  - Login
+    - [ ] Login using JWT strategy
 - [ ] Logger Setting
+
+## LATER-TODO
+- [ ] Typeorm configuration use 'forRootAsync' provided by TypeORM.
 
 ## Installation
 
