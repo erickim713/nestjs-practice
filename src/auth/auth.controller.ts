@@ -14,14 +14,12 @@ export class AuthController {
 
   @Post('login')
   async login(@Body() loginDto: LoginDto) {
-    console.log(loginDto);
     const { username, password } = loginDto;
     const user = await this.authService.findUser(username);
     if (typeof user === 'undefined') {
       throw new LoginFailException();
     }
     const refreshToken = v4();
-    console.log(refreshToken);
     const token = this.authService.generateJWT(user);
 
     const data = {
