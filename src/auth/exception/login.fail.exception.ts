@@ -3,6 +3,7 @@ import { createExceptionBody } from '../../util/exception/exception.util';
 
 export const ERROR_CODE = 'LOGIN_FAILED';
 export const ERROR_MESSAGE = 'username/password incorrect';
+
 export class LoginFailException extends HttpException {
   constructor() {
     super(
