@@ -10,8 +10,8 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('jello')
-  online(): string {
-    return 'hello';
+  @Get('online')
+  online(): boolean {
+    return this.appService.checkOnline();
   }
 }
