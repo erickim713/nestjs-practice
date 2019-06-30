@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 describe('Application basic test', () => {
-
   class AppServiceMock {
     public getHello(): string {
       return 'Hello World';
@@ -19,14 +18,15 @@ describe('Application basic test', () => {
   beforeAll(async () => {
     const app: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
-      providers: [{
-        provide: AppService,
-        useClass: AppServiceMock
-      }],
+      providers: [
+        {
+          provide: AppService,
+          useClass: AppServiceMock,
+        },
+      ],
     }).compile();
 
     appController = app.get<AppController>(AppController);
-    console.log(appController);
   });
 
   describe('App Test', () => {
@@ -36,8 +36,8 @@ describe('Application basic test', () => {
     });
 
     it('if online: should return true', () => {
-      const expected = true
+      const expected = true;
       expect(appController.online()).toBe(expected);
-    })
+    });
   });
 });
