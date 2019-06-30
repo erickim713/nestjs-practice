@@ -11,9 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgres',
-      password: 'docker',
-      database: 'test',
+      username: 'gitpod',
+      database: 'postgres',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
@@ -23,4 +22,4 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

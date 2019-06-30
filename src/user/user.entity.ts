@@ -1,5 +1,4 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { Todo } from 'src/todo/todo.entity';
 
 @Entity('user')
 export class User {
@@ -23,7 +22,4 @@ export class User {
     name: 'salt',
   })
   public salt: Buffer;
-
-  @OneToMany(type => Todo, todo => todo.user)
-  public todos: Todo[]
 }

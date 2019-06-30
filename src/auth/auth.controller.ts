@@ -1,12 +1,12 @@
 import { Controller, Get, Post, Body, HttpException } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto';
-import { LoginFailException } from './exception/auth.exception';
+import { LoginFailException } from './exception';
 import { v4 } from 'uuid';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService) { }
   @Get()
   hello() {
     return this.authService.test();
